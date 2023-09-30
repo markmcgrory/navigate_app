@@ -1,7 +1,7 @@
 use navigate;
 db.dropDatabase();
 
-    db.serviceUsers.insertMAny([
+    db.serviceUsers.insertMany([
         {
             name: "Robert Falconbridge",
             age: 55,
@@ -43,7 +43,7 @@ db.dropDatabase();
             dob:"31/12/1622"
         },
         {
-            name: "Margarine Jourdain"
+            name: "Margarine Jourdain",
             age: 46,
             dob: "10/12/1654"
         },
@@ -67,4 +67,4 @@ db.dropDatabase();
             age: 14,
             dob: "17/09/1681"
         }
-    ])
+    ]);
