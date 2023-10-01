@@ -6,6 +6,7 @@ import NewUserForm from '../component/UsersFolder/NewUserForm';
 import APIService from '../component/APIService';
 import UsersList from '../component/UsersFolder/UsersList';
 import ServicesList from '../component/ServicesFolder/ServicesList';
+import UpdateUserForm from '../component/UsersFolder/UpdateUserForm';
 
 const NavigateContainer = () => {
 
@@ -53,13 +54,9 @@ const NavigateContainer = () => {
         <NavBar/>
             <Routes> 
                 <Route path='/'/>
-                <Route path='/service-users' 
-                        element={<UsersList users={users}  
-                                            deleteUser={deleteUser} 
-                                            updateUser={updateUser}
-                                            addUser={createUser}/>}/>
+                <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} updateUser={updateUser} addUser={createUser}/>}/>
                 <Route path='/services' element={<ServicesList/>}/>
-                <Route/>
+                {/* <Route path={`/update-user/${user._id}`} element={<UpdateUserForm updateUser={updateUser}/>}/> */}
             </Routes>
             <Footer/>
         </div>
