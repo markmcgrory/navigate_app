@@ -33,12 +33,19 @@ const NavigateContainer = () => {
         .then(savedUser => setUsers([...users, savedUser]))
     };
 
+    const deleteUser = idToDelete => {
+        APIService.deleteUser(idToDelete)
+    };
+
+
+
+
     return (
         <div>
             <NavBar/>
             <h1>Hello World</h1>
             <NewUserForm addUser={createUser}/>
-            <UsersList users={users}/>
+            <UsersList users={users} deleteUser={deleteUser}/>
             <Footer/>
         </div>
       );
