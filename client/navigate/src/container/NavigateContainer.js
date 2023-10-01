@@ -1,7 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from '../component/NavBar';
 import Footer from '../component/Footer';
+import NewUserForm from '../component/UsersFolder/NewUserForm';
+import APIService from '../component/APIService';
+import UsersList from '../component/UsersFolder/UsersList';
 
 const NavigateContainer = () => {
 
@@ -14,15 +17,28 @@ const NavigateContainer = () => {
         {name:"Simon Community Maxwell", location:"Maxwell Drive"},
         {name:"Homeless Casework Team", location:"30 Mansion Street, Glasgow G22 5SZ"},
         {name:"Shelter Scotland", location:"116 Osborne Street, Glasgow"},
-        {name:"Glasgow city mission", location:"20 Crimea Street, Glasgow G2 8PW"}
+        {name:"Glasgow City Mission", location:"20 Crimea Street, Glasgow G2 8PW"}
     ]
 
     const [services, setServices] = useState(ServicesData)
+    const [users, setUsers] = useState([])
+
+    useEffect(() =>{
+    APIService.getUsers()
+    .then(users => setUsers(users));
+    }, []);
+
+    const createUser = newUser => {
+        APIService.postUser(newUser)
+        .then(savedUser => setUsers([...users, savedUser]))
+    };
 
     return (
         <div>
             <NavBar/>
             <h1>Hello World</h1>
+            <NewUserForm addUser={createUser}/>
+            <UsersList users={users}/>
             <Footer/>
         </div>
       );

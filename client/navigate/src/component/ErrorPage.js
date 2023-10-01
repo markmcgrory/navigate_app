@@ -1,7 +1,12 @@
 import React from 'react';
 
 const ErrorPage = () => {
-    return (  );
+
+    return (
+        <>
+        <h3>Some Funny Error Message!</h3>
+        </>
+     );
 }
  
 export default ErrorPage;
