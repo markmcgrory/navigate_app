@@ -50,13 +50,18 @@ const NavigateContainer = () => {
         setUsers(updatedUsers); 
     };
 
+    const selectUser = user_id => {
+        setSelectedUser(users.filter(user => user._id !== user_id))
+        
+    }
+
 
     return (
         <div>
         <NavBar/>
             <Routes> 
                 <Route path='/'/>
-                <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} updateUser={updateUser} addUser={createUser}/>}/>
+                <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} selectUser={selectUser} addUser={createUser}/>}/>
                 <Route path='/services' element={<ServicesList services={services}/>}/>
                 {/* <Route path={`/service-selected/${service.id}`} element={<ServiceItem services={services}/>}/> */}
                 {/* <Route path={`/update-user/${user._id}`} element={<UpdateUserForm updateUser={updateUser}/>}/> */}

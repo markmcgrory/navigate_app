@@ -12,14 +12,14 @@ justify-content: center;
 gap: 10px;
 `
 
-const UserList = ({users, addUser, deleteUser, updateUser}) => {
+const UserList = ({users, addUser, deleteUser, selectUser}) => {
     
     const userNodes = users.map((user)=> {
         return <UserItem 
         user={user}
         key={user._id}
         deleteUser={deleteUser}
-        updateUser={updateUser}/>
+        selectUser={selectUser}/>
     })
 
     // const userUpdate = users.map((user) => {

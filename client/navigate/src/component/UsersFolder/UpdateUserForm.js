@@ -32,7 +32,7 @@ const UpdateUserForm = ({user, updateUser}) => {
             <input 
             type='text'
             id='name'
-            value={name}
+            defaultvalue={user.name}
             required
             onChange={handleNameChange}
             placeholder={name}
