@@ -3,6 +3,15 @@ import UserItem from './UserItem';
 import NewUserForm from './NewUserForm';
 import {Routes, Route} from 'react-router-dom'
 
+import styled from 'styled-components';
+
+const GridDisplay = styled.div`
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+justify-content: center;
+gap: 10px;
+`
+
 const UserList = ({users, addUser, deleteUser, updateUser}) => {
     
     const userNodes = users.map((user)=> {
@@ -28,7 +37,9 @@ const UserList = ({users, addUser, deleteUser, updateUser}) => {
             <h1>I am the Users List</h1>
             <NewUserForm addUser={addUser}/>
             <br></br>
-            {userNodes}
+            <GridDisplay>
+                {userNodes}
+            </GridDisplay>
             {/* {userUpdate} */}
         </div>
       );

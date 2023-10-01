@@ -7,6 +7,7 @@ import APIService from '../component/APIService';
 import UsersList from '../component/UsersFolder/UsersList';
 import ServicesList from '../component/ServicesFolder/ServicesList';
 import UpdateUserForm from '../component/UsersFolder/UpdateUserForm';
+import ServiceItem from '../component/ServicesFolder/ServiceItem';
 
 const NavigateContainer = () => {
 
@@ -24,6 +25,7 @@ const NavigateContainer = () => {
 
     const [services, setServices] = useState(ServicesData)
     const [users, setUsers] = useState([])
+    const [selectedUser, setSelectedUser] = useState([])
 
     useEffect(() =>{
     APIService.getUsers()
@@ -55,7 +57,8 @@ const NavigateContainer = () => {
             <Routes> 
                 <Route path='/'/>
                 <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} updateUser={updateUser} addUser={createUser}/>}/>
-                <Route path='/services' element={<ServicesList/>}/>
+                <Route path='/services' element={<ServicesList services={services}/>}/>
+                {/* <Route path={`/service-selected/${service.id}`} element={<ServiceItem services={services}/>}/> */}
                 {/* <Route path={`/update-user/${user._id}`} element={<UpdateUserForm updateUser={updateUser}/>}/> */}
             </Routes>
             <Footer/>

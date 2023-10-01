@@ -2,6 +2,14 @@ import React from 'react';
 import UpdateUserForm from './UpdateUserForm';
 import { Link } from 'react-router-dom';
 
+import styled from 'styled-components';
+
+const ItemStyle = styled.div`
+border: 2px solid black;
+margin: 0.5em;
+padding: 1em;
+`
+
 const UserItem = ({user, deleteUser, updateUser}) => {
 
     const handleDeleteUser = () => {
@@ -13,7 +21,7 @@ const UserItem = ({user, deleteUser, updateUser}) => {
     };
 
     return ( 
-        <div>
+        <ItemStyle>
             <li>Name: {user.name}</li>
             <ul>Age: {user.age}</ul>
             <ul>D.O.B.: {user.dob}</ul>
@@ -21,7 +29,7 @@ const UserItem = ({user, deleteUser, updateUser}) => {
             {/* <ul><button onClick={() => updateUser(user._id)}>Update</button></ul> */}
             {/* <Link to={`/update-user/${user._id}`}>Update User</Link> */}
             <br></br>
-        </div>
+        </ItemStyle>
      );
 }
  
