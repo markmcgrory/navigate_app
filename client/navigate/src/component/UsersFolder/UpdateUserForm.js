@@ -1,7 +1,16 @@
 import React from 'react';
 
-const UpdateUserForm = () => {
-    return (  );
+const UpdateUserForm = ({user}) => {
+
+    
+
+    
+    
+    return ( 
+        <>
+        </>
+
+     );
 }
  
 export default UpdateUserForm;

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import {Routes, Route} from "react-router-dom"
 import NavBar from '../component/NavBar';
 import Footer from '../component/Footer';
 import NewUserForm from '../component/UsersFolder/NewUserForm';
@@ -39,13 +39,21 @@ const NavigateContainer = () => {
     };
 
     const updateUser = updatedUser => {
-        APIService.updateUser(updatedUser)
+        APIService.updateUser(updatedUser);
+        const updatedUserIndex = users.findIndex(user => user._id === updatedUser._id);
+        const updatedUsers = [...users];
+        updatedUsers[updatedUserIndex] = updatedUser;
+        setUsers(updatedUsers); 
     };
 
 
     return (
         <div>
-            <NavBar/>
+        <NavBar/>
+            <Routes> 
+                <Route/>
+            </Routes>
+
             <h1>Hello World</h1>
             <NewUserForm addUser={createUser}/>
             <UsersList users={users} deleteUser={deleteUser} updateUser={updateUser}/>
