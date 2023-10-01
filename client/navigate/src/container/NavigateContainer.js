@@ -5,6 +5,7 @@ import Footer from '../component/Footer';
 import NewUserForm from '../component/UsersFolder/NewUserForm';
 import APIService from '../component/APIService';
 import UsersList from '../component/UsersFolder/UsersList';
+import ServicesList from '../component/ServicesFolder/ServicesList';
 
 const NavigateContainer = () => {
 
@@ -52,14 +53,14 @@ const NavigateContainer = () => {
         <NavBar/>
             <Routes> 
                 <Route path='/'/>
-                <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} updateUser={updateUser}/>}/>
-                <Route/>
+                <Route path='/service-users' 
+                        element={<UsersList users={users}  
+                                            deleteUser={deleteUser} 
+                                            updateUser={updateUser}
+                                            addUser={createUser}/>}/>
+                <Route path='/services' element={<ServicesList/>}/>
                 <Route/>
             </Routes>
-
-            <h1>Hello World</h1>
-            <NewUserForm addUser={createUser}/>
-            
             <Footer/>
         </div>
       );

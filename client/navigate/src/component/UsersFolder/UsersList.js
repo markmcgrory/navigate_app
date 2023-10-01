@@ -1,7 +1,8 @@
 import React from 'react';
 import UserItem from './UserItem';
+import NewUserForm from './NewUserForm';
 
-const UserList = ({users, deleteUser, updateUser}) => {
+const UserList = ({users, addUser, deleteUser, updateUser}) => {
     
     const userNodes = users.map((user)=> {
         return <UserItem 
@@ -14,6 +15,8 @@ const UserList = ({users, deleteUser, updateUser}) => {
     return (
         <div>
             <h1>I am the Users List</h1>
+            <NewUserForm addUser={addUser}/>
+            <br></br>
             {userNodes}
         </div>
       );
