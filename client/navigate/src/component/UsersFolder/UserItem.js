@@ -1,13 +1,17 @@
 import React from 'react';
 
-const UserItem = ({user}) => {
+const UserItem = ({user, deleteUser, updateUser}) => {
+
+    const handleDeleteUser = () => {
+        deleteUser(user._id)
+    };
 
     return ( 
         <div>
             <li>Name: {user.name}</li>
             <ul>Age: {user.age}</ul>
             <ul>D.O.B.: {user.dob}</ul>
-            <ul><button type='submit' value={deleteUser(ev.target.value)}/></ul>
+            <ul><button onClick={() => deleteUser(user._id)}>Delete</button></ul>
         </div>
      );
 }

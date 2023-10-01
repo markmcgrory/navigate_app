@@ -6,7 +6,9 @@ const UserList = ({users, deleteUser, updateUser}) => {
     const userNodes = users.map((user)=> {
         return <UserItem 
         user={user}
-        key={user._id}/>
+        key={user._id}
+        deleteUser={deleteUser}
+        updateUser={updateUser}/>
     })
     
     return (

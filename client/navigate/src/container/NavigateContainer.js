@@ -34,7 +34,8 @@ const NavigateContainer = () => {
     };
 
     const deleteUser = idToDelete => {
-        APIService.deleteUser(idToDelete)
+        APIService.deleteUser(idToDelete);
+        setUsers(users.filter(user => user._id !== idToDelete));
     };
 
     const updateUser = updatedUser => {
