@@ -1,7 +1,7 @@
 import React from 'react';
 import UserItem from './UserItem';
 
-const UserList = ({users}) => {
+const UserList = ({users, deleteUser, updateUser}) => {
     
     const userNodes = users.map((user)=> {
         return <UserItem 

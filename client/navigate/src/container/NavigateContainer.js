@@ -37,7 +37,9 @@ const NavigateContainer = () => {
         APIService.deleteUser(idToDelete)
     };
 
-
+    const updateUser = updatedUser => {
+        APIService.updateUser(updatedUser)
+    };
 
 
     return (
@@ -45,7 +47,7 @@ const NavigateContainer = () => {
             <NavBar/>
             <h1>Hello World</h1>
             <NewUserForm addUser={createUser}/>
-            <UsersList users={users} deleteUser={deleteUser}/>
+            <UsersList users={users} deleteUser={deleteUser} updateUser={updateUser}/>
             <Footer/>
         </div>
       );

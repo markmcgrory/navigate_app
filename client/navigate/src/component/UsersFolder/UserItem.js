@@ -7,6 +7,7 @@ const UserItem = ({user}) => {
             <li>Name: {user.name}</li>
             <ul>Age: {user.age}</ul>
             <ul>D.O.B.: {user.dob}</ul>
+            <ul><button type='submit' value={deleteUser(ev.target.value)}/></ul>
         </div>
      );
 }
