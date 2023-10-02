@@ -8,19 +8,17 @@ const UserProfile = ({selectedUser, selectUser}) => {
     }
 
     return ( 
-        <div>
-            <h1>Hi, this is user profile</h1>
-            <h1>IMAGE HERE</h1>
+        <div>       
             <img src={selectedUser.image}/>
-            <h1>{selectedUser.name}</h1>
-            <h1>{selectedUser.age}</h1>
-            <h1>{selectedUser.dob}</h1>
-            <h1>{selectedUser.gender}</h1>
-            <h1>{selectedUser.mob}</h1>
-            <h1>{selectedUser.address}</h1>
-            <h1>{selectedUser.nok}</h1>
-            <h1>{selectedUser.clinic}</h1>
-            <h1>{selectedUser.employment}</h1>
+            <p>Name: {selectedUser.name}</p>
+            <p>Age: {selectedUser.age} </p>
+            <p>Date of birth: {selectedUser.dob}</p>
+            <p>Gender: {selectedUser.gender}</p>
+            <p>Mobile number: {selectedUser.mob}</p>
+            <p>Address: {selectedUser.address}</p>
+            <p>Next of kin: {selectedUser.nok}</p>
+            <p>Clinic: {selectedUser.clinic}</p>
+            <p>Employment status: {selectedUser.employment}</p>
             
             <Link to={`/update-user/${selectedUser._id}`}><button onClick={handleSelectUser}>Update User</button></Link>
         </div>
