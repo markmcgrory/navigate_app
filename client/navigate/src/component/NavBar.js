@@ -5,9 +5,10 @@ import styled from 'styled-components';
 
 
 const Image = styled.img`
-margin-left: 500px;
+position: absolute;
+right: 0;
 margin-block: auto;
-margin-bottom: 100px;
+/* margin-bottom: 100px; */
 
 
 
@@ -20,7 +21,7 @@ const NavBar = () => {
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/service-users'>Service Users</Link></li>
             <li><Link to='/services'>Services</Link></li>
-             <Image src={logo} width='300' height='100' alt='logo'/>
+             <Image src={logo} width='150' height='63' alt='logo'/>
 
            
             
