@@ -71,12 +71,14 @@ const NavigateContainer = () => {
         <NavBar/>
             <Routes> 
                 <Route path='/'/>
-                <Route path={`/user-profile/:id`} element={<UserProfile selectedUser={selectedUser}/>}/>
+                <Route path={`/user-profile/:id`} element={<UserProfile selectedUser={selectedUser} selectUser={selectUser}/>}/>
 
                 <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} selectUser={selectUser} addUser={createUser}/>}/>
                 <Route path='/services' element={<ServicesList services={services}/>}/>
+
                 {/* <Route path={`/service-selected/${service.id}`} element={<ServiceItem services={services}/>}/> */}
-                {/* <Route path={`/update-user/${user._id}`} element={<UpdateUserForm updateUser={updateUser}/>}/> */}
+
+                <Route path={`/update-user/${selectedUser._id}`} element={<UpdateUserForm user={selectedUser} updateUser={updateUser}/>} />
             </Routes>
             <Footer/>
         </div>

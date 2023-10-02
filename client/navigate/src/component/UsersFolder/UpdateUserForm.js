@@ -32,7 +32,7 @@ const UpdateUserForm = ({user, updateUser}) => {
             <input 
             type='text'
             id='name'
-            defaultvalue={user.name}
+            value={user.name}
             required
             onChange={handleNameChange}
             placeholder={name}
@@ -44,7 +44,7 @@ const UpdateUserForm = ({user, updateUser}) => {
             <input 
             type='number'
             id='age'
-            value={age}
+            value={user.age}
             required
             onChange={handleAgeChange}
             placeholder={age}
@@ -56,7 +56,7 @@ const UpdateUserForm = ({user, updateUser}) => {
             <input 
             type='text'
             id='age'
-            value={dob}
+            value={user.dob}
             required
             onChange={handleDobChange}
             placeholder={dob}
