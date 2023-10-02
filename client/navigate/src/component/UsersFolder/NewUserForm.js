@@ -48,7 +48,7 @@ const NewUserForm = ({addUser}) => {
     }
     
     return ( 
-        <form onSubmit={handleSubmit}>
+        <form className='NewUserForm' onSubmit={handleSubmit}>
             <h1>Add a new user</h1>
             <div className='group'>
                 <label htmlFor='name'>Name: </label>
@@ -149,7 +149,7 @@ const NewUserForm = ({addUser}) => {
                 />    
             </div>
             
-            <input type='submit' name='submt' value="Save"/>
+            <input className='savebutton' type='submit' name='submt' value="Save"/>
         </form>
 
 

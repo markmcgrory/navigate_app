@@ -8,8 +8,9 @@ const UserProfile = ({selectedUser, selectUser}) => {
     }
 
     return ( 
-        <div>       
-            <img src={selectedUser.image}/>
+        <div className='UserProfile'>       
+            <div className='image'><img src={selectedUser.image}/></div>
+            <div className='UserProfileText'>
             <p>Name: {selectedUser.name}</p>
             <p>Age: {selectedUser.age} </p>
             <p>Date of birth: {selectedUser.dob}</p>
@@ -21,6 +22,7 @@ const UserProfile = ({selectedUser, selectUser}) => {
             <p>Employment status: {selectedUser.employment}</p>
             
             <Link to={`/update-user/${selectedUser._id}`}><button onClick={handleSelectUser}>Update User</button></Link>
+            </div>
         </div>
     );
 }

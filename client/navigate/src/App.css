@@ -26,6 +26,86 @@ body {
   height: 4rem;
 }
 
+.UserProfile{
+  background-color: white;
+  border-radius: 2rem;
+  color: black;
+  position: relative;
+  width: 90vmin;
+  aspect-ratio: 1.618;
+  top:5rem;
+  left:3rem;
+}
+
+
+.UserList{
+  position: relative;
+  width:100%;
+}
+
+.UsersGrid{
+  position: absolute;
+  left:1rem;
+  width: 70%;
+}
+
+.NewUserForm{
+  position: absolute;
+  right: 5rem;
+  width: 20%;
+}
+
+.image{
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: 55%;
+}
+
+.UserProfileText{
+  position: absolute;
+  top: 8%;
+  left:10%;
+  font-size: small;
+}
+
+button{
+  background-color: #c63d2f;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 1rem;
+}
+
+.savebutton{
+  background-color: #c63d2f;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 1rem;
+}
+
+.ServiceList{
+  position: relative;
+  width: 100%;
+}
+
+.GridDisplay{
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 90%;
+}
+
 h1{
   text-align: center;
 }
@@ -52,4 +132,12 @@ li a:hover{
 
 img {
   max-width: 50%;
+}
+
+input{
+  width:100%;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  box-sizing: border-box;
+  right:20px;
 }

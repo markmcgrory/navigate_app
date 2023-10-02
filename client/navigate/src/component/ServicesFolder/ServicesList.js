@@ -6,11 +6,10 @@ import styled from 'styled-components';
 
 const GridDisplay = styled.div`
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(4, 1fr);
 justify-content: center;
 gap: 10px;
 `
-
 const ServicesList = ({services}) => {
 
     const serviceNodes = services.map((service, index) => {
@@ -18,12 +17,12 @@ const ServicesList = ({services}) => {
     })
     
     return ( 
-        <>
-            <GridDisplay>
-                {serviceNodes}
-            </GridDisplay>
+        <div className='ServiceList'>
+            <div className='GridDisplay'>
+                <GridDisplay>{serviceNodes}</GridDisplay>
+            </div>
 
-        </>
+        </div>
      );
 }
  

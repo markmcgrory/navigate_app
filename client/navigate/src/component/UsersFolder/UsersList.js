@@ -30,15 +30,17 @@ const UserList = ({users, addUser, deleteUser, selectUser}) => {
     // })
     
     return (
-        <div>
+        <div className='UserList'>
             {/* <Routes>
                 <Route path={`/update-user/${user._id}`} element={<UpdateUserForm updateUser={updateUser} user={user}/>}/>
             </Routes> */}
             <NewUserForm addUser={addUser}/>
             <br></br>
+            <div className='UsersGrid'>
             <GridDisplay>
                 {userNodes}
             </GridDisplay>
+            </div>
             {/* {userUpdate} */}
         </div>
       );
