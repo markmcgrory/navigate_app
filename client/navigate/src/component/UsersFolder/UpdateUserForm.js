@@ -1,26 +1,34 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 
 
 const UpdateUserForm = ({user, updateUser}) => {
 
-    const [name, setName] = useState('');
-    const [age, setAge] = useState(0);
-    const [dob, setDob] = useState('');
+    const [name, setName] = useState(user.name);
+    const [age, setAge] = useState(user.age);
+    const [dob, setDob] = useState(user.dob);
+    const [id, setId] = useState(user._id);
+
+    const navigate = useNavigate()
 
     const handleNameChange = (ev) => setName(ev.target.value)
     const handleAgeChange = (ev) => setAge(ev.target.value)
     const handleDobChange = (ev) => setDob(ev.target.value)
 
     const handleSubmit = ev => {
+        console.log("HANDLE SUBMIT!!!");
         ev.preventDefault();
         updateUser({
+
+            _id: id,
             name: name,
             age: age,
             dob: dob
         });
-        setName(user.name)
-        setAge(user.age)
-        setDob(user.dob);
+        navigate("/service-users")
+        // setName(name)
+        // setAge(age)
+        // setDob(dob);
     }
     
     return ( 
@@ -53,14 +61,16 @@ const UpdateUserForm = ({user, updateUser}) => {
             <label htmlFor='dob'>Date of Birth:</label>
             <input 
             type='text'
-            id='age'
+            id='dob'
             defaultValue={user.dob}
             required
             onChange={handleDobChange}
             />    
         </div>
         
-        <input type='submit' name='submt' value="Save"/>
+        {/* <Link to={`/user-profile/${user._id}`}><input type='submit' name='submt' value="Update"/></Link> */}
+        <input type='submit' name='submt' value="Update"/>
+
     </form>
 
      );

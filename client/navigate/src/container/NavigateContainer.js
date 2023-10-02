@@ -43,12 +43,14 @@ const NavigateContainer = () => {
         setUsers(users.filter(user => user._id !== idToDelete));
     };
 
-    const updateUser = updatedUser => {
-        APIService.updateUser(updatedUser);
-        const updatedUserIndex = users.findIndex(user => user._id === updatedUser._id);
+    const updateUser = data => {
+        console.log("data", data);
+        APIService.updateUser(data);
+        const updatedUserIndex = users.findIndex(user => user._id === data._id);
         const updatedUsers = [...users];
-        updatedUsers[updatedUserIndex] = updatedUser;
-        setUsers(updatedUsers); 
+        updatedUsers[updatedUserIndex] = data;
+        setUsers(updatedUsers);
+        
     };
 
     const selectUser = user_id => {
@@ -71,7 +73,7 @@ const NavigateContainer = () => {
         <NavBar/>
             <Routes> 
                 <Route path='/'/>
-                <Route path={`/user-profile/:id`} element={<UserProfile selectedUser={selectedUser} selectUser={selectUser}/>}/>
+                <Route path={`/user-profile/${selectedUser._id}`} element={<UserProfile selectedUser={selectedUser} selectUser={selectUser}/>}/>
 
                 <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} selectUser={selectUser} addUser={createUser}/>}/>
                 <Route path='/services' element={<ServicesList services={services}/>}/>
