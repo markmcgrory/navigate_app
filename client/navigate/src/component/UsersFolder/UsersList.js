@@ -34,7 +34,6 @@ const UserList = ({users, addUser, deleteUser, selectUser}) => {
             {/* <Routes>
                 <Route path={`/update-user/${user._id}`} element={<UpdateUserForm updateUser={updateUser} user={user}/>}/>
             </Routes> */}
-            <h1>I am the Users List</h1>
             <NewUserForm addUser={addUser}/>
             <br></br>
             <GridDisplay>

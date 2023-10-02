@@ -69,7 +69,7 @@ const NavigateContainer = () => {
 
 
     return (
-        <div>
+        <div className='StyleContainer'>
         <NavBar/>
             <Routes> 
                 <Route path='/'/>

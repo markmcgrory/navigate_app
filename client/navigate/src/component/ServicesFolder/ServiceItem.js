@@ -4,9 +4,14 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
 const ItemStyle = styled.div`
-border: 2px solid black;
-margin: 0.5em;
+border-radius: 25px;
+background-color:white;
+margin: 0em;
 padding: 1em;
+&:hover{
+  background-color: #E37C46;
+  color: white;
+}
 `
 
 const ServiceItem = ({service}) => {

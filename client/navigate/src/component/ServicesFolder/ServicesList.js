@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const GridDisplay = styled.div`
 display: grid;
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(3, 1fr);
 justify-content: center;
 gap: 10px;
 `
@@ -19,7 +19,6 @@ const ServicesList = ({services}) => {
     
     return ( 
         <>
-            <h1>I am the Services List - Howdy</h1>
             <GridDisplay>
                 {serviceNodes}
             </GridDisplay>
