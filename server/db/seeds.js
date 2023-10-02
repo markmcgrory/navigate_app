@@ -24,6 +24,7 @@ db.dropDatabase();
             address: 'The Big Blue House',
             nok: 'Jonjoe - 399477488',
             clinic: 'The RoundHouse',
+            employment: "unemployed",
             image: 'https://iepfclaim.in/wp-content/uploads/2022/01/29-297391_woman-at-clker-vector-free-download-png-clipart.png'
         },
         
