@@ -31,8 +31,8 @@ const UserItem = ({user, deleteUser, selectUser}) => {
             <ul>D.O.B.: {user.dob}</ul>
             <ul><button onClick={() => deleteUser(user._id)}>Delete</button></ul>
             {/* <ul><button onClick={() => updateUser(user._id)}>Update</button></ul> */}
-            <ul><Link to={`/update-user/${user._id}`}>Update User</Link><br></br></ul>
-            <ul><button onClick={handleSelectUser}>Show Profile</button></ul>
+            {/* <ul><Link to={`/update-user/${user._id}`}>Update User</Link><br></br></ul> */}
+            <ul><Link to={`/user-profile/${user._id}`}><button onClick={handleSelectUser}>Show Profile</button></Link></ul>
             <br></br>
         </ItemStyle>
      );

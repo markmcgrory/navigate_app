@@ -8,6 +8,7 @@ import UsersList from '../component/UsersFolder/UsersList';
 import ServicesList from '../component/ServicesFolder/ServicesList';
 import UpdateUserForm from '../component/UsersFolder/UpdateUserForm';
 import ServiceItem from '../component/ServicesFolder/ServiceItem';
+import UserProfile from '../component/UsersFolder/UserProfile';
 
 const NavigateContainer = () => {
 
@@ -51,7 +52,16 @@ const NavigateContainer = () => {
     };
 
     const selectUser = user_id => {
-        setSelectedUser(users.filter(user => user._id !== user_id))
+        for(let user of users){
+            console.log("user", user);
+            console.log("search term", user_id)
+            if (user._id === user_id){
+                console.log(user);
+                setSelectedUser(user)
+            }
+        }
+        // setSelectedUser(users.filter(user => user._id === user_id))
+        // setSelectedUser("Hello")
         
     }
 
@@ -61,6 +71,8 @@ const NavigateContainer = () => {
         <NavBar/>
             <Routes> 
                 <Route path='/'/>
+                <Route path={`/user-profile/:id`} element={<UserProfile selectedUser={selectedUser}/>}/>
+
                 <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} selectUser={selectUser} addUser={createUser}/>}/>
                 <Route path='/services' element={<ServicesList services={services}/>}/>
                 {/* <Route path={`/service-selected/${service.id}`} element={<ServiceItem services={services}/>}/> */}
