@@ -17,7 +17,13 @@ body {
 }
 
 .NavBar{
-  background-color: antiquewhite;
+  width: 100%;
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color:white;
+  height: 4rem;
 }
 
 h1{

@@ -9,6 +9,7 @@ import ServicesList from '../component/ServicesFolder/ServicesList';
 import UpdateUserForm from '../component/UsersFolder/UpdateUserForm';
 import ServiceItem from '../component/ServicesFolder/ServiceItem';
 import UserProfile from '../component/UsersFolder/UserProfile';
+import HomePage from '../component/HomePage';
 
 const NavigateContainer = () => {
 
@@ -72,7 +73,7 @@ const NavigateContainer = () => {
         <div className='StyleContainer'>
         <NavBar/>
             <Routes> 
-                <Route path='/'/>
+                <Route path='/' element={<HomePage/>}/>
                 <Route path={`/user-profile/${selectedUser._id}`} element={<UserProfile selectedUser={selectedUser} selectUser={selectUser}/>}/>
 
                 <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} selectUser={selectUser} addUser={createUser}/>}/>
