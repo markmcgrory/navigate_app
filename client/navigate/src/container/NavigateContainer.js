@@ -14,11 +14,11 @@ import HomePage from '../component/HomePage';
 const NavigateContainer = () => {
 
     const ServicesData = [
-        {name: "Aspire Paisley", location: "Paisley Road West"},
-        {name:"Aspire Queen Margaret", location: "Queen Margaret Drive"},
-        {name:"Aspire Copeland", location: "Coperland Road Hotel"},
+        {name: "Aspire Paisley", location: "1610 Paisley Road West, Glasgow, G52 3QN", xy: [x: -4.336142, y:], image: 'navigate_app/client/navigate/src/component/images/aspirepaisley.png'},
+        {name:"Aspire Queen Margaret", location: "117 Queen Margaret Drive, Glasgow G20 8PB"},
+        // {name:"Aspire Copeland", location: "Coperland Road Hotel"},
         {name: "Help the Homeless Glasgow", location:"45b Gartcraig Road, PO Box 2274, Glasgow, G33 2WX"},
-        {name: "Simon Community Kent", location: "Kent Road"},
+        {name: "Simon Glasgow Access Hub", location: "389 Argyle Street, Glasgow G2 8LR"},
         {name:"Simon Community Maxwell", location:"Maxwell Drive"},
         {name:"Homeless Casework Team", location:"30 Mansion Street, Glasgow G22 5SZ"},
         {name:"Shelter Scotland", location:"116 Osborne Street, Glasgow"},

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import aspirepaisley from './images/aspirepaisley.png'
 
 import styled from 'styled-components';
 
@@ -22,6 +23,7 @@ const ServiceItem = ({service}) => {
 
     return ( 
         <ItemStyle>
+            <img src={service.image}/>
             <ul>Name: {service.name}</ul>
             <ul>Location: {service.name}</ul>
             <ul>Bed State: ??</ul>
