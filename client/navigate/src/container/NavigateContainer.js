@@ -26,7 +26,7 @@ const NavigateContainer = () => {
 
     const ServicesData = [
         {name: "Aspire Paisley", location: "1610 Paisley Road West, Glasgow, G52 3QN", xy: [-4.336153, 55.846321], image: image_11, id: 1},
-        {name:"Aspire Queen Margaret", location: "117 Queen Margaret Drive, Glasgow G20 8PB", xy: [], image: image_12, id: 2},
+        {name:"Aspire Queen Margaret", location: "117 Queen Margaret Drive, Glasgow G20 8PB", xy: [-4.284379, 55.880659], image: image_12, id: 2},
         {name:"Aspire Copeland", location: "78 -80 Coperland Road, Glasgow, G51 2RT", xy:[-4.302981 , 55.856343], image: image_13, id: 3},
         {name: "Help the Homeless Glasgow", location:"45b Gartcraig Road, PO Box 2274, Glasgow, G33 2WX", xy: [-4.184007, 55.865911], image: image_14, id: 4},
         {name: "Simon Glasgow Access Hub", location: "389 Argyle Street, Glasgow G2 8LR",  xy: [-4.336142, 55.846322], image: image_15, id: 5},
