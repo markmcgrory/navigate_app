@@ -25,15 +25,15 @@ const image_19 = require('../component/images/image_19.png')
 const NavigateContainer = () => {
 
     const ServicesData = [
-        {name: "Aspire Paisley", location: "1610 Paisley Road West, Glasgow, G52 3QN", xy: [-4.336153, 55.846321], image: image_11},
-        {name:"Aspire Queen Margaret", location: "117 Queen Margaret Drive, Glasgow G20 8PB", xy: [], image: image_12},
-        {name:"Aspire Copeland", location: "78 -80 Coperland Road, Glasgow, G51 2RT", xy:[-4.302981 , 55.856343], image: image_13},
-        {name: "Help the Homeless Glasgow", location:"45b Gartcraig Road, PO Box 2274, Glasgow, G33 2WX", xy: [-4.184007, 55.865911], image: image_14},
-        {name: "Simon Glasgow Access Hub", location: "389 Argyle Street, Glasgow G2 8LR",  xy: [-4.336142, 55.846322], image: image_15},
-        {name:"Simon Community Maxwell", location:"35 Maxwell Drive, Pollockshields, Glasgow, G41 5DT", xy: [-4.285179, 55.845484], image: image_16},
-        {name:"Homeless Casework Team", location:"30 Mansion Street, Glasgow G22 5SZ", xy: [-4.256163, 55.885845], image: image_17},
-        {name:"Shelter Scotland", location:"116 Osborne Street, Glasgow, G1 4RZ", xy: [-4.249488, 55.856887], image: image_18},
-        {name:"Glasgow City Mission", location:"20 Crimea Street, Glasgow G2 8PW", xy: [-4.265525, 55.858022], image: image_19}
+        {name: "Aspire Paisley", location: "1610 Paisley Road West, Glasgow, G52 3QN", xy: [-4.336153, 55.846321], image: image_11, id: 1},
+        {name:"Aspire Queen Margaret", location: "117 Queen Margaret Drive, Glasgow G20 8PB", xy: [], image: image_12, id: 2},
+        {name:"Aspire Copeland", location: "78 -80 Coperland Road, Glasgow, G51 2RT", xy:[-4.302981 , 55.856343], image: image_13, id: 3},
+        {name: "Help the Homeless Glasgow", location:"45b Gartcraig Road, PO Box 2274, Glasgow, G33 2WX", xy: [-4.184007, 55.865911], image: image_14, id: 4},
+        {name: "Simon Glasgow Access Hub", location: "389 Argyle Street, Glasgow G2 8LR",  xy: [-4.336142, 55.846322], image: image_15, id: 5},
+        {name:"Simon Community Maxwell", location:"35 Maxwell Drive, Pollockshields, Glasgow, G41 5DT", xy: [-4.285179, 55.845484], image: image_16, id: 6},
+        {name:"Homeless Casework Team", location:"30 Mansion Street, Glasgow G22 5SZ", xy: [-4.256163, 55.885845], image: image_17, id: 7},
+        {name:"Shelter Scotland", location:"116 Osborne Street, Glasgow, G1 4RZ", xy: [-4.249488, 55.856887], image: image_18, id: 8},
+        {name:"Glasgow City Mission", location:"20 Crimea Street, Glasgow G2 8PW", xy: [-4.265525, 55.858022], image: image_19, id: 9}
     ]
 
     const [services, setServices] = useState(ServicesData)
@@ -46,6 +46,10 @@ const NavigateContainer = () => {
     APIService.getUsers()
     .then(users => setUsers(users));
     }, []);
+
+    useEffect(() => {
+        console.log(selectedService);
+    }, [selectedService])
 
     const createUser = newUser => {
         APIService.postUser(newUser)
@@ -80,12 +84,13 @@ const NavigateContainer = () => {
         // setSelectedUser(users.filter(user => user._id === user_id))
         // setSelectedUser("Hello")
 
-    const selectService = service_id => {
+    const selectService = serviceData => {
+        console.log("HELLOOOO!!!!!!!!!!!!!!!!!!");
         for(let service of services){
-            if (service.id === service_id){
+            if (service.id === serviceData){
                 setSelectedService(service)
                 }
-            } 
+            }
     };
 
 
@@ -97,7 +102,7 @@ const NavigateContainer = () => {
                 <Route path={`/user-profile/${selectedUser._id}`} element={<UserProfile selectedUser={selectedUser} selectUser={selectUser}/>}/>
 
                 <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} selectUser={selectUser} addUser={createUser}/>}/>
-                <Route path='/services' element={<ServicesList services={services} selectService={selectService} selectedService={selectService}/>}/>
+                <Route path='/services' element={<ServicesList services={services} selectService={selectService} selectedService={selectedService}/>}/>
 
                 {/* <Route path={`/service-selected/${service.id}`} element={<ServiceItem services={services}/>}/> */}
 

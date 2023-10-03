@@ -14,11 +14,19 @@ padding: 1em;
 }
 `
 
-const ServiceItem = ({service}) => {
+const ServiceItem = ({service, selectService}) => {
 
     // const handleDeleteService = () => {
     //     deleteService(service)
     // };
+
+    // let selected = false
+
+    const handleSelectService = () => {
+      // ev.preventDefault()
+      selectService(service.id)
+      // selected = true
+  }
 
     return ( 
         <ItemStyle>
@@ -27,8 +35,9 @@ const ServiceItem = ({service}) => {
             <ul>Location: {service.location}</ul>
             <ul>Bed State: ??</ul>
             <ul><Link to={`/service-selected/${service.id}`}>More Info</Link></ul>
+            <button onClick={handleSelectService}>Show On Map</button>
             <br></br>
-            {/* <ul><button onClick={() => deleteService(service)}>Delete</button></ul> */}
+            {/* {selected ? <h3>Selected</h3> : <h3>Not Selected</h3>} */}
         </ItemStyle>
      );
 }
