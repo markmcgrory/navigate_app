@@ -15,6 +15,7 @@ const FooterStyled = styled.footer`
   position: fixed;
   bottom: 0;
   width: 100%;
+  height:2em;
   `
 
 const Footer = () => {

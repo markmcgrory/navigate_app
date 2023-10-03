@@ -3,6 +3,7 @@ import ServiceItem from './ServiceItem'
 import { Routes, Route } from 'react-router-dom'
 
 import styled from 'styled-components';
+import ArcGISMap from '../Map/ArcGISMap';
 
 const GridDisplay = styled.div`
 display: grid;
@@ -19,6 +20,7 @@ const ServicesList = ({services}) => {
     return ( 
         <div className='ServiceList'>
             <div className='GridDisplay'>
+            <ArcGISMap/>
                 <GridDisplay>{serviceNodes}</GridDisplay>
             </div>
 
