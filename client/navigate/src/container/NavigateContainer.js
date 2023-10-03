@@ -14,15 +14,15 @@ import HomePage from '../component/HomePage';
 const NavigateContainer = () => {
 
     const ServicesData = [
-        {name: "Aspire Paisley", location: "1610 Paisley Road West, Glasgow, G52 3QN", xy: [x: -4.336142, y:], image: 'navigate_app/client/navigate/src/component/images/aspirepaisley.png'},
+        {name: "Aspire Paisley", location: "1610 Paisley Road West, Glasgow, G52 3QN", xy: [-4.336153, 55.846321], image: 'navigate_app/client/navigate/src/component/images/aspirepaisley.png'},
         {name:"Aspire Queen Margaret", location: "117 Queen Margaret Drive, Glasgow G20 8PB"},
-        // {name:"Aspire Copeland", location: "Coperland Road Hotel"},
-        {name: "Help the Homeless Glasgow", location:"45b Gartcraig Road, PO Box 2274, Glasgow, G33 2WX"},
-        {name: "Simon Glasgow Access Hub", location: "389 Argyle Street, Glasgow G2 8LR"},
-        {name:"Simon Community Maxwell", location:"Maxwell Drive"},
-        {name:"Homeless Casework Team", location:"30 Mansion Street, Glasgow G22 5SZ"},
-        {name:"Shelter Scotland", location:"116 Osborne Street, Glasgow"},
-        {name:"Glasgow City Mission", location:"20 Crimea Street, Glasgow G2 8PW"}
+        {name:"Aspire Copeland", location: "78 -80 Coperland Road, Glasgow, G51 2RT", xy:[-4.302981 , 55.856343]},
+        {name: "Help the Homeless Glasgow", location:"45b Gartcraig Road, PO Box 2274, Glasgow, G33 2WX", xy: [-4.184007, 55.865911]},
+        {name: "Simon Glasgow Access Hub", location: "389 Argyle Street, Glasgow G2 8LR",  xy: [-4.336142, 55.846322]},
+        {name:"Simon Community Maxwell", location:"35 Maxwell Drive, Pollockshields, Glasgow, G41 5DT", xy: [-4.285179, 55.845484]},
+        {name:"Homeless Casework Team", location:"30 Mansion Street, Glasgow G22 5SZ", xy: [-4.256163, 55.885845]},
+        {name:"Shelter Scotland", location:"116 Osborne Street, Glasgow, G1 4RZ", xy: [-4.249488, 55.856887]},
+        {name:"Glasgow City Mission", location:"20 Crimea Street, Glasgow G2 8PW", xy: [-4.265525, 55.858022]}
     ]
 
     const [services, setServices] = useState(ServicesData)

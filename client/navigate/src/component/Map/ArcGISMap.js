@@ -23,8 +23,8 @@ const ArcGISMap = () => {
 
         const glasgowCoords = [-4.2518, 55.8642];
 
-        loadModules(['esri/Map', 'esri/views/MapView'], { css:true })
-        .then(([Map, MapView]) => {
+        loadModules(['esri/Map', 'esri/views/MapView', 'esri/widgets/Search'], { css:true })
+        .then(([Map, MapView, Search]) => {
 
             const map = new Map(mapConfig)
 
@@ -34,6 +34,9 @@ const ArcGISMap = () => {
                 center: glasgowCoords,
                 zoom: 12
             });
+
+            const search = new Search({ view });
+            view.ui.add(search, "top-right");
         })
         .catch(error => {
             console.error('Sorry the map is not available!:', error);
