@@ -47,23 +47,6 @@ const ArcGISMap = ({selectedService}) => {
                 latitude: selectedService.xy[1]
             };
 
-            // const point2 = {
-            //     type: "point",
-            //     longitude: -4.302981,
-            //     latitude: 55.856343
-            // };
-
-            // const point3 = {
-            //     type: "point",
-            //     longitude: -4.184007,
-            //     latitude: 55.865911
-            // };
-
-            // const point5 = {
-            //     type: "point",
-            //     longitude: -4.336142,
-            //     latitude: 55.846322
-            // };
 
             const simpleMarkerSymbol = {
                 type: "simple-marker",
@@ -79,26 +62,8 @@ const ArcGISMap = ({selectedService}) => {
                 symbol: simpleMarkerSymbol
             });
 
-            // const pointGraphic2 = new Graphic({
-            //     geometry: point2,
-            //     symbol: simpleMarkerSymbol
-            // });
-
-            // const pointGraphic3 = new Graphic({
-            //     geometry: point3,
-            //     symbol: simpleMarkerSymbol
-            // });
-
-            // const pointGraphic5 = new Graphic({
-            //     geometry: point5,
-            //     symbol: simpleMarkerSymbol
-            // });
-
 
             graphicsLayer.add(pointGraphic)
-            // graphicsLayer.add(pointGraphic2)
-            // graphicsLayer.add(pointGraphic3)
-            // graphicsLayer.add(pointGraphic5)
         })
         .catch(error => {
             console.error('Sorry the map is not available!:', error);
