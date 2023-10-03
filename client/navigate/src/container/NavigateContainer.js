@@ -11,18 +11,29 @@ import ServiceItem from '../component/ServicesFolder/ServiceItem';
 import UserProfile from '../component/UsersFolder/UserProfile';
 import HomePage from '../component/HomePage';
 
+
+const image_11 = require('../component/images/image_11.png')
+const image_12 = require('../component/images/image_12.png')
+const image_13 = require('../component/images/image_13.png')
+const image_14 = require('../component/images/image_14.png')
+const image_15 = require('../component/images/image_15.png')
+const image_16 = require('../component/images/image_16.png')
+const image_17 = require('../component/images/image_17.png')
+const image_18 = require('../component/images/image_18.png')
+const image_19 = require('../component/images/image_19.png')
+
 const NavigateContainer = () => {
 
     const ServicesData = [
-        {name: "Aspire Paisley", location: "1610 Paisley Road West, Glasgow, G52 3QN", xy: [-4.336153, 55.846321], image: 'navigate_app/client/navigate/src/component/images/aspirepaisley.png'},
-        {name:"Aspire Queen Margaret", location: "117 Queen Margaret Drive, Glasgow G20 8PB"},
-        {name:"Aspire Copeland", location: "78 -80 Coperland Road, Glasgow, G51 2RT", xy:[-4.302981 , 55.856343]},
-        {name: "Help the Homeless Glasgow", location:"45b Gartcraig Road, PO Box 2274, Glasgow, G33 2WX", xy: [-4.184007, 55.865911]},
-        {name: "Simon Glasgow Access Hub", location: "389 Argyle Street, Glasgow G2 8LR",  xy: [-4.336142, 55.846322]},
-        {name:"Simon Community Maxwell", location:"35 Maxwell Drive, Pollockshields, Glasgow, G41 5DT", xy: [-4.285179, 55.845484]},
-        {name:"Homeless Casework Team", location:"30 Mansion Street, Glasgow G22 5SZ", xy: [-4.256163, 55.885845]},
-        {name:"Shelter Scotland", location:"116 Osborne Street, Glasgow, G1 4RZ", xy: [-4.249488, 55.856887]},
-        {name:"Glasgow City Mission", location:"20 Crimea Street, Glasgow G2 8PW", xy: [-4.265525, 55.858022]}
+        {name: "Aspire Paisley", location: "1610 Paisley Road West, Glasgow, G52 3QN", xy: [-4.336153, 55.846321], image: image_11},
+        {name:"Aspire Queen Margaret", location: "117 Queen Margaret Drive, Glasgow G20 8PB", xy: [], image: image_12},
+        {name:"Aspire Copeland", location: "78 -80 Coperland Road, Glasgow, G51 2RT", xy:[-4.302981 , 55.856343], image: image_13},
+        {name: "Help the Homeless Glasgow", location:"45b Gartcraig Road, PO Box 2274, Glasgow, G33 2WX", xy: [-4.184007, 55.865911], image: image_14},
+        {name: "Simon Glasgow Access Hub", location: "389 Argyle Street, Glasgow G2 8LR",  xy: [-4.336142, 55.846322], image: image_15},
+        {name:"Simon Community Maxwell", location:"35 Maxwell Drive, Pollockshields, Glasgow, G41 5DT", xy: [-4.285179, 55.845484], image: image_16},
+        {name:"Homeless Casework Team", location:"30 Mansion Street, Glasgow G22 5SZ", xy: [-4.256163, 55.885845], image: image_17},
+        {name:"Shelter Scotland", location:"116 Osborne Street, Glasgow, G1 4RZ", xy: [-4.249488, 55.856887], image: image_18},
+        {name:"Glasgow City Mission", location:"20 Crimea Street, Glasgow G2 8PW", xy: [-4.265525, 55.858022], image: image_19}
     ]
 
     const [services, setServices] = useState(ServicesData)
