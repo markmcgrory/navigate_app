@@ -24,7 +24,7 @@ const ServiceItem = ({service}) => {
         <ItemStyle>
             <img src={service.image}/>
             <ul>Name: {service.name}</ul>
-            <ul>Location: {service.name}</ul>
+            <ul>Location: {service.location}</ul>
             <ul>Bed State: ??</ul>
             <ul><Link to={`/service-selected/${service.id}`}>More Info</Link></ul>
             <br></br>
