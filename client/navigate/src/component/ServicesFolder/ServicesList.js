@@ -11,7 +11,7 @@ grid-template-columns: repeat(4, 1fr);
 justify-content: center;
 gap: 10px;
 `
-const ServicesList = ({services}) => {
+const ServicesList = ({services, selectService, selectedService}) => {
 
     const serviceNodes = services.map((service, index) => {
         return <ServiceItem service={service} key={index}/>

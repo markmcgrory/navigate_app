@@ -37,7 +37,8 @@ const NavigateContainer = () => {
     ]
 
     const [services, setServices] = useState(ServicesData)
-    
+    const [selectedService, setSelectedService] = useState([])
+
     const [users, setUsers] = useState([])
     const [selectedUser, setSelectedUser] = useState([])
 
@@ -68,17 +69,24 @@ const NavigateContainer = () => {
 
     const selectUser = user_id => {
         for(let user of users){
-            console.log("user", user);
-            console.log("search term", user_id)
+            // console.log("user", user);
+            // console.log("search term", user_id)
             if (user._id === user_id){
                 console.log(user);
                 setSelectedUser(user)
             }
-        }
+        }}
+
         // setSelectedUser(users.filter(user => user._id === user_id))
         // setSelectedUser("Hello")
-        
-    }
+
+    const selectService = service_id => {
+        for(let service of services){
+            if (service.id === service_id){
+                setSelectedService(service)
+                }
+            } 
+    };
 
 
     return (
@@ -89,7 +97,7 @@ const NavigateContainer = () => {
                 <Route path={`/user-profile/${selectedUser._id}`} element={<UserProfile selectedUser={selectedUser} selectUser={selectUser}/>}/>
 
                 <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} selectUser={selectUser} addUser={createUser}/>}/>
-                <Route path='/services' element={<ServicesList services={services}/>}/>
+                <Route path='/services' element={<ServicesList services={services} selectService={selectService} selectedService={selectService}/>}/>
 
                 {/* <Route path={`/service-selected/${service.id}`} element={<ServiceItem services={services}/>}/> */}
 
@@ -98,6 +106,6 @@ const NavigateContainer = () => {
             <Footer/>
         </div>
       );
-}
+};
  
 export default NavigateContainer;
