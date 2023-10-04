@@ -38,13 +38,13 @@ const ServiceItem = ({service, selectService}) => {
 
     return ( 
         <ItemStyle>
-            <img src={service.image}/>
+            <img className='imageService'src={service.image}/>
             <ul>Name: {service.name}</ul>
             <ul>Location: {service.location}</ul>
             <ul>Bed State: {bedStatus}</ul>
-            <ul><Link to={`/service-selected/${service.id}`}><button onClick={handleSelectService}>More Info</button></Link></ul>
-            <button onClick={handleSelectService}>Show On Map</button>
-            <button onClick={onClick}>Reserve a bed</button>
+            <ul><Link to={`/service-selected/${service.id}`}><button id="show-info" onClick={handleSelectService}>More Info</button></Link></ul>
+            <button id="button-service" onClick={handleSelectService}>Show On Map</button>
+            <button id="button-service" className="reserveButton" onClick={onClick}>Reserve a bed</button>
             <br></br>
             {/* {selected ? <h3>Selected</h3> : <h3>Not Selected</h3>} */}
         </ItemStyle>

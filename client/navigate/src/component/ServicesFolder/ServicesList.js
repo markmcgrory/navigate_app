@@ -12,17 +12,17 @@ justify-content: center;
 gap: 10px;
 `
 
-const ServicesList = ({services, selectService, setSelectedService, selectedService, setServices}) => {
+const ServicesList = ({services, selectService, selectedService}) => {
 
     const serviceNodes = services.map((service, index) => {
-        return <ServiceItem service={service} key={index} setServices={setServices} selectedService={selectedService} setSelectedService={setSelectedService}/>
+        return <ServiceItem service={service} key={index} selectService={selectService}/>
     });
 
     
     return ( 
         <div className='ServiceList'>
             <div className='GridDisplay'>
-            <ArcGISMap selectedService={selectedService}/>
+            <ArcGISMap selectedService={selectedService}/>wqex
                 <GridDisplay>{serviceNodes}</GridDisplay>
             </div>
 

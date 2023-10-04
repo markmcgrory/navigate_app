@@ -7,7 +7,7 @@ const ShowService = ({selectedService}) => {
     return (
         <div>
               <div className='ServiceProfile'>       
-        <div className='image'><img src={selectedService.image}/></div>
+        <div ><img src={selectedService.image}/></div>
         <div className='ServiceProfileText'>
         <p>Name: {selectedService.name}</p>
         <p>Location: {selectedService.location} </p>

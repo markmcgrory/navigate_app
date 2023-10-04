@@ -85,10 +85,11 @@ const NavigateContainer = () => {
         // setSelectedUser(users.filter(user => user._id === user_id))
         // setSelectedUser("Hello")
 
-    const selectService = serviceToSelect => {
+    const selectService = serviceData => {
+        console.log("HEEEELLLOOOOOOO");
         for (let service in services){
-            if (service.id === serviceToSelect){
-                setSelectedService(serviceToSelect)
+            if (service.id === serviceData){
+                setSelectedService(service)
             };
         };
     };
@@ -103,7 +104,7 @@ const NavigateContainer = () => {
 
                 <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} selectUser={selectUser} addUser={createUser}/>}/>
 
-                <Route path='/services' element={<ServicesList services={services} selectService={selectService} setSelectedService={setSelectedService} selectedService={selectedService} setServices = {setServices}/>}/>
+                <Route path='/services' element={<ServicesList services={services} selectService={selectService} selectedService={selectedService}/>}/>
 
                 <Route path={`/service-selected/${selectedService.id}`} element={<ShowService selectedService={selectedService}/>}/>
 

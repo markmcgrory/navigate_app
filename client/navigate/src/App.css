@@ -20,7 +20,7 @@ body {
   display: block;
   margin: 0;
   padding: 1.5em;
-  background-color:#010536;
+  background-color:#90AACB;
   height: 4rem;
 }
 .UserProfile{
@@ -61,25 +61,31 @@ body {
   height: 100%;
   width: 80%;
   position: absolute;
-  top: 20%;
-  left: 55%;
+  top: 15%;
+  left: 50%;
+  
+}
+
+.imageService{
+  /* margin-right: 10px; */
+  margin-left: 65px;
 }
 .UserProfileText{
   position: absolute;
-  top: 8%;
+  top: 15%;
   left:10%;
   font-size: small;
 }
 .ServiceProfileText{
   position: relative;
-  top: 8%;
+  top: 10%;
   left:10%;
   font-size: small;
   padding-right: 2em;
 }
 /* delete and show profile button feature */
 button{
-  background-color: #1C315E;
+  background-color: #90AACB;
   border: none;
   color: white;
   padding: 8px 32px;
@@ -98,8 +104,19 @@ button:active{
   background-color: white;
   color:#1C315E;
 }
+.reserveButton{
+  margin-top:10px;
+}
+
+#button-service{
+  margin-left: 40px;
+}
+
+#show-info{
+  margin-left: 20px;
+}
 .savebutton{
-  background-color: #1C315E;
+  background-color: #90AACB;
   border: none;
   color: white;
   padding: 15px 32px;
