@@ -15,6 +15,14 @@ padding: 1em;
   color: white;
 }
 `
+const ButtonContainer = styled.div`
+display: flex;
+flex-direction: column;
+margin-right: 20px;
+margin-left: -20px;
+width: 12em;
+justify-content: center;
+`
 
 const ServiceItem = ({service, selectService}) => {
 
@@ -33,9 +41,13 @@ const ServiceItem = ({service, selectService}) => {
             <ul>Name: {service.name}</ul>
             <ul>Location: {service.location}</ul>
             <ul>Bed State: ??</ul>
-            <ul><Link to={`/service-selected/${service.id}`}><button  id="more-info" onClick={handleSelectService}>More Info</button></Link></ul>
-            <button id="service-button" onClick={handleSelectService}>Show On Map</button>
-            <br></br>
+            <ButtonContainer>
+              <br></br><Link to={`/service-selected/${service.id}`}><button  id="more-info" onClick={handleSelectService}>More Info</button></Link>
+              <br></br>
+              <button id="service-button" onClick={handleSelectService}>Show On Map</button>
+              <br></br>
+            </ButtonContainer>
+
             {/* {selected ? <h3>Selected</h3> : <h3>Not Selected</h3>} */}
         </ItemStyle>
      );

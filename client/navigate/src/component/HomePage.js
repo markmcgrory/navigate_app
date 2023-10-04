@@ -56,7 +56,7 @@ const HomePage = () => {
         <BackgroundImage>
             <HeaderContainer>
             <HeaderStyle>Navigate</HeaderStyle>
-            <HeaderStyle1>Helping You Find Shelter</HeaderStyle1>
+            <HeaderStyle1>Helping People Find Shelter</HeaderStyle1>
             </HeaderContainer>
         </BackgroundImage>
      );
