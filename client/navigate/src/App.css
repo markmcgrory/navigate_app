@@ -43,10 +43,10 @@ body {
   border: 1px solid #90AACB ;
   color: black;
   position: relative;
-  width: 110vmin;
+  width: 85vmin;
   aspect-ratio: 1.618;
   top:5rem;
-  left:3rem;
+  left:2.5rem;
 }
 .UserList{
   position: relative;
@@ -87,6 +87,13 @@ body {
   top: 20%;
   left: 45%;
 }
+.image1{
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: 45%;
+}
 .UserProfileText{
   position: absolute;
   top: 20%;
@@ -100,12 +107,13 @@ body {
 }
 
 .ServiceProfileText{
-  position: relative;
-  top: 40%;
+  position: absolute;
+  top: 20%;
   left:10%;
   font-size:medium;
   padding-right: 2em;
-  text-wrap: break-word;
+  inline-size: 150px;
+  overflow-wrap: break-word;
 }
 /* delete and show profile button feature */
 button{

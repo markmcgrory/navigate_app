@@ -86,7 +86,7 @@ const NavigateContainer = () => {
         // setSelectedUser("Hello")
 
     const selectService = serviceData => {
-        console.log("HELLOOOO!!!!!!!!!!!!!!!!!!");
+        // console.log("HELLOOOO!!!!!!!!!!!!!!!!!!");
         for(let service of services){
             if (service.id === serviceData){
                 setSelectedService(service)

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import styled from "styled-components";
 
@@ -8,10 +8,13 @@ display: flex;
 
 const ShowService = ({selectedService}) => {
 
+    const [serviceList, setServiceList] = useState([])
+
     return (
         <Container>
               <div className='ServiceProfile'>       
-        <div className='image'><img src={selectedService.image}/></div>
+        <div className='image1'><img src={selectedService.image}/></div>
+        <div><br></br></div>
         <div className='ServiceProfileText'>
         <p><b>Name:</b> {selectedService.name}</p>
         <p><b>Location:</b> {selectedService.location} </p>
