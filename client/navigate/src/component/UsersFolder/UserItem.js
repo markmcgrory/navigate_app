@@ -11,8 +11,8 @@ background-color:white;
 margin: 0em;
 padding: 1em;
 &:hover{
-  background-color: #E37C46;
-  color: white;
+  /* background-color: #E37C46; */
+  /* color: white; */
 }
 `
 
@@ -33,10 +33,10 @@ const UserItem = ({user, deleteUser, selectUser}) => {
     return ( 
         <ItemStyle>
             <figure><img src={user["image"]}  alt="photo"/></figure>
-            <ul>Name: {user.name}</ul>
-            <ul>Age: {user.age}</ul>
-            <ul>D.O.B.: {user.dob}</ul>
-            <ul><button onClick={() => deleteUser(user._id)}>Delete</button></ul>
+            <ul><b>Name:</b> {user.name}</ul>
+            <ul><b>Age:</b> {user.age}</ul>
+            <ul><b>D.O.B.:</b> {user.dob}</ul>
+            <ul><button id="delete-button" onClick={() => deleteUser(user._id)}>Delete</button></ul>
             {/* <ul><button onClick={() => updateUser(user._id)}>Update</button></ul> */}
             {/* <ul><Link to={`/update-user/${user._id}`}>Update User</Link><br></br></ul> */}
             <ul><Link to={`/user-profile/${user._id}`}><button onClick={handleSelectUser}>Show Profile</button></Link></ul>

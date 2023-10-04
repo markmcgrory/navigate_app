@@ -6,6 +6,8 @@ import styled from 'styled-components';
 const ItemStyle = styled.div`
 border-radius: 25px;
 background-color:white;
+border: 1px solid #90AACB;
+
 margin: 1em;
 padding: 1em;
 &:hover{

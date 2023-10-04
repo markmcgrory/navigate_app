@@ -7,6 +7,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
+  min-height: 50px;
+  margin-bottom: 120px;
+  clear: both;
 }
 .StyledContainer {
   display: flex;
@@ -19,13 +22,14 @@ body {
   list-style-type: none;
   display: block;
   margin: 0;
-  padding: 1.5em;
+  padding: 1em;
   background-color:#90AACB;
   height: 4rem;
 }
 .UserProfile{
   background-color: white;
   border-radius: 2rem;
+  border: 1px solid #90AACB ;
   color: black;
   position: relative;
   width: 90vmin;
@@ -36,6 +40,7 @@ body {
 .ServiceProfile{
   background-color: white;
   border-radius: 2rem;
+  border: 1px solid #90AACB ;
   color: black;
   position: relative;
   width: 110vmin;
@@ -57,25 +62,50 @@ body {
   right: 5rem;
   width: 20%;
 }
+
+#UpdateUserForm{
+  position: absolute;
+  right: 5rem;
+  width: 20%;
+  margin: 3px;
+  margin-right: 40em;
+}
+
+#updateHeader{
+  border: 1px solid #90AACB;
+  background-color: #90AACB;
+  color: white;
+  border-radius: 25px;
+  padding:6px;
+  text-align: center;
+}
+
 .image{
   height: 100%;
   width: 80%;
   position: absolute;
   top: 20%;
-  left: 55%;
+  left: 45%;
 }
 .UserProfileText{
   position: absolute;
-  top: 8%;
+  top: 20%;
   left:10%;
   font-size: small;
+  font-size:15px;
 }
+
+#update-user-button{
+  margin-top: 25px;
+}
+
 .ServiceProfileText{
   position: relative;
-  top: 8%;
+  top: 40%;
   left:10%;
-  font-size: small;
+  font-size:medium;
   padding-right: 2em;
+  text-wrap: break-word;
 }
 /* delete and show profile button feature */
 button{
@@ -188,8 +218,9 @@ figure:hover img{
 }
 /* Create an id on the update button for this work */
 #update-button{
-  background-color: #1C315E;
+  background-color: #90AACB;
   color: white;
+  border-color: #90AACB;
 }
 #update-button:hover{
   background-color: #607EAA;
@@ -210,3 +241,8 @@ figure:hover img{
   /* margin-left: 5px; */
 
 }
+
+#delete-button {
+margin-left: 20px;
+}
+

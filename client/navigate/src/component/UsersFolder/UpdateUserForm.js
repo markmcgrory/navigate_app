@@ -51,9 +51,9 @@ const UpdateUserForm = ({user, updateUser}) => {
     }
     
     return ( 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} id="UpdateUserForm">
 
-        <h1>Update User</h1>
+        <h2 id="updateHeader" >Update User</h2>
         <div className='group'>
             <label htmlFor='name'>Name: </label>
             <input 
@@ -153,8 +153,7 @@ const UpdateUserForm = ({user, updateUser}) => {
             />    
         </div>
         
-        
-        <input type='submit' name='submt' value="Update"/>
+        <input id="update-button" type='submit' name='submt' value="Update"/>
 
     </form>
 

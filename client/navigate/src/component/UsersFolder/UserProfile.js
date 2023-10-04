@@ -11,17 +11,17 @@ const UserProfile = ({selectedUser, selectUser}) => {
         <div className='UserProfile'>       
             <div className='image'><img src={selectedUser.image}/></div>
             <div className='UserProfileText'>
-            <p>Name: {selectedUser.name}</p>
-            <p>Age: {selectedUser.age} </p>
-            <p>Date of birth: {selectedUser.dob}</p>
-            <p>Gender: {selectedUser.gender}</p>
-            <p>Mobile number: {selectedUser.mob}</p>
-            <p>Address: {selectedUser.address}</p>
-            <p>Next of kin: {selectedUser.nok}</p>
-            <p>Clinic: {selectedUser.clinic}</p>
-            <p>Employment status: {selectedUser.employment}</p>
+            <p><b>Name:</b> {selectedUser.name}</p>
+            <p><b>Age:</b> {selectedUser.age} </p>
+            <p><b>Date of birth:</b> {selectedUser.dob}</p>
+            <p><b>Gender:</b> {selectedUser.gender}</p>
+            <p><b>Mobile number:</b> {selectedUser.mob}</p>
+            <p><b>Address:</b> {selectedUser.address}</p>
+            <p><b>Next of kin:</b> {selectedUser.nok}</p>
+            <p><b>Clinic:</b> {selectedUser.clinic}</p>
+            <p><b>Employment status:</b> {selectedUser.employment}</p>
             
-            <Link to={`/update-user/${selectedUser._id}`}><button onClick={handleSelectUser}>Update User</button></Link>
+            <Link to={`/update-user/${selectedUser._id}`}><button id="update-user-button" onClick={handleSelectUser}>Update User</button></Link>
             </div>
         </div>
     );

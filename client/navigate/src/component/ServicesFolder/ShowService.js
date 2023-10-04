@@ -2,24 +2,28 @@ import React from "react";
 
 import styled from "styled-components";
 
+const Container = styled.div`
+display: flex;
+`
+
 const ShowService = ({selectedService}) => {
 
     return (
-        <div>
+        <Container>
               <div className='ServiceProfile'>       
         <div className='image'><img src={selectedService.image}/></div>
         <div className='ServiceProfileText'>
-        <p>Name: {selectedService.name}</p>
-        <p>Location: {selectedService.location} </p>
-        <p>Bed State/Capacity: ??</p>
+        <p><b>Name:</b> {selectedService.name}</p>
+        <p><b>Location:</b> {selectedService.location} </p>
+        {/* <p>Bed State/Capacity: ??</p> */}
 
-        <p>Grid Display List of Service Users put into service 'basket'?</p>
+        {/* <p>Grid Display List of Service Users put into service 'basket'?</p> */}
         
         </div>
     </div>
 
 
-        </div> 
+        </Container> 
      );
 }
  

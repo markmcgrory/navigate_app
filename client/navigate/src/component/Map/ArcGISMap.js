@@ -5,7 +5,7 @@ import { loadModules } from 'esri-loader'
 import styled, {keyframes} from "styled-components";
 
 const MapBorder = styled.div`
-border: 15px solid whitesmoke;
+border: 15px solid #90AACB;
 border-radius: 10px;
 animation: fadeIn 6s;
 @keyframes fadeIn {
