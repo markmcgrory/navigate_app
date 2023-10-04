@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Paragraph = styled.p`
 text-align: center;
 background:#90AACB;
-padding:2em;
+padding: 1.3em;
 color: white;
 margin:0;
 margin-top:20px;
