@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import aspirepaisley from '../images/aspirepaisley.png'
 
 import styled from 'styled-components';
 
@@ -15,21 +14,27 @@ padding: 1em;
 }
 `
 
-const ServiceItem = ({service}) => {
+const ServiceItem = ({service, selectService}) => {
 
-    // const handleDeleteService = () => {
-    //     deleteService(service)
-    // };
+   // Service item becomes like a checkout basket - service users can be assigned, unassigned
+   // details are rendered as a list through each service when they are deposited
+
+    const handleSelectService = () => {
+      // ev.preventDefault()
+      selectService(service.id)
+      // selected = true
+  }
 
     return ( 
         <ItemStyle>
             <img src={service.image}/>
             <ul>Name: {service.name}</ul>
-            <ul>Location: {service.name}</ul>
+            <ul>Location: {service.location}</ul>
             <ul>Bed State: ??</ul>
-            <ul><Link to={`/service-selected/${service.id}`}>More Info</Link></ul>
+            <ul><Link to={`/service-selected/${service.id}`}><button onClick={handleSelectService}>More Info</button></Link></ul>
+            <button onClick={handleSelectService}>Show On Map</button>
             <br></br>
-            {/* <ul><button onClick={() => deleteService(service)}>Delete</button></ul> */}
+            {/* {selected ? <h3>Selected</h3> : <h3>Not Selected</h3>} */}
         </ItemStyle>
      );
 }

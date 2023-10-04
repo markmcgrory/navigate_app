@@ -1,29 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const FooterStyled = styled.footer`
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: block;
-  color: #c63d2f;
-  text-align: center;
-  font-size: 0.5rem;
-  font-weight: bold;
-  padding:0.5rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height:2em;
-  `
-
+const Paragraph = styled.p`
+text-align: center;
+background:#010536;
+padding:2em;
+color: white;
+margin:0;
+margin-top:20px;
+bottom: 0px;
+position: fixed;
+width: 100%;
+position:fixed;
+bottom: 0px;
+font-size:0.7em;
+`
 const Footer = () => {
-    return ( 
-        <FooterStyled>
-            <h1>&copy; 2023 M.I.M.E</h1>
-        </FooterStyled>
-     );
+    return (
+      <Paragraph>M.I.M.E™ is a trademark of M.I.M.E International Limited.
+      ©2023 M.I.M.E International Limited. All Rights Reserved.</Paragraph>     );
 }
- 
 export default Footer;

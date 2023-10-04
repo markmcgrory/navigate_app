@@ -11,16 +11,17 @@ grid-template-columns: repeat(4, 1fr);
 justify-content: center;
 gap: 10px;
 `
-const ServicesList = ({services}) => {
+const ServicesList = ({services, selectService, selectedService}) => {
 
     const serviceNodes = services.map((service, index) => {
-        return <ServiceItem service={service} key={index}/>
+        return <ServiceItem service={service} key={index} selectService={selectService}/>
     })
+
     
     return ( 
         <div className='ServiceList'>
             <div className='GridDisplay'>
-            <ArcGISMap/>
+            <ArcGISMap selectedService={selectedService}/>
                 <GridDisplay>{serviceNodes}</GridDisplay>
             </div>
 
