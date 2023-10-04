@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const ItemStyle = styled.div`
 border-radius: 25px;
+border: 1px solid #90AACB;
 background-color:white;
 margin: 0em;
 padding: 1em;
@@ -31,7 +32,7 @@ const UserItem = ({user, deleteUser, selectUser}) => {
 
     return ( 
         <ItemStyle>
-            <img src={user["image"]}  alt="photo"/>
+            <figure><img src={user["image"]}  alt="photo"/></figure>
             <ul>Name: {user.name}</ul>
             <ul>Age: {user.age}</ul>
             <ul>D.O.B.: {user.dob}</ul>

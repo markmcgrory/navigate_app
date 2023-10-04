@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 const Paragraph = styled.p`
 text-align: center;
-background:#010536;
+background:#90AACB;
 padding:2em;
 color: white;
 margin:0;

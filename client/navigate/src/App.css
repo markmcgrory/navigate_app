@@ -20,7 +20,7 @@ body {
   display: block;
   margin: 0;
   padding: 1.5em;
-  background-color:#010536;
+  background-color:#90AACB;
   height: 4rem;
 }
 .UserProfile{
@@ -79,7 +79,7 @@ body {
 }
 /* delete and show profile button feature */
 button{
-  background-color: #1C315E;
+  background-color: #90AACB;
   border: none;
   color: white;
   padding: 8px 32px;
@@ -99,7 +99,7 @@ button:active{
   color:#1C315E;
 }
 .savebutton{
-  background-color: #1C315E;
+  background-color: #90AACB;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -121,12 +121,23 @@ button:active{
   position: relative;
   width: 100%;
 }
+#service-button{
+margin-left: 55px;
+}
+#image-service{
+  margin-left: 65px;
+}
+
+#more-info{
+  margin-left: 30px;
+}
 .GridDisplay{
   position: absolute;
   left: 1rem;
   top: 1rem;
   width: 90%;
 }
+
 h1{
   text-align: center;
 }
@@ -187,4 +198,15 @@ figure:hover img{
   border: 1px solid #1C315E;
   background-color: white;
   color:#1C315E;
+}
+
+#add-user {
+  border: .5px solid #607EAA;
+  background-color: #90AACB;
+  color: white;
+  border-radius: 25px;
+  padding: 12px 32px;
+  text-align: center;
+  /* margin-left: 5px; */
+
 }

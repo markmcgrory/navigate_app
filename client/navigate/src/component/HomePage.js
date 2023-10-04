@@ -17,6 +17,7 @@ align-items: center;
 width: 100vw;
 height: 100vh;
 overflow: hidden;
+
 `
 
 const HeaderStyle = styled.h1`
@@ -47,15 +48,16 @@ animation: fadeIn 10s;
 const HeaderContainer = styled.div`
 display: flex;
 flex-direction: column;
+margin-bottom: 25em
 `
 
 const HomePage = () => {
     return ( 
         <BackgroundImage>
-            <div>
+            <HeaderContainer>
             <HeaderStyle>Navigate</HeaderStyle>
             <HeaderStyle1>Helping You Find Shelter</HeaderStyle1>
-            </div>
+            </HeaderContainer>
         </BackgroundImage>
      );
 }
