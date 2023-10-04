@@ -35,7 +35,7 @@ body {
   width: 90vmin;
   aspect-ratio: 1.618;
   top:5rem;
-  left:3rem;
+  left:2.5rem;
 }
 .ServiceProfile{
   background-color: white;
@@ -96,10 +96,12 @@ body {
 }
 .UserProfileText{
   position: absolute;
-  top: 20%;
-  left:10%;
+  /* top: 2%; */
+  left:5%;
   font-size: small;
   font-size:15px;
+  inline-size: 280px;
+  overflow-wrap: break-word;
 }
 
 #update-user-button{
