@@ -10,6 +10,7 @@ import UpdateUserForm from '../component/UsersFolder/UpdateUserForm';
 import ServiceItem from '../component/ServicesFolder/ServiceItem';
 import UserProfile from '../component/UsersFolder/UserProfile';
 import HomePage from '../component/HomePage';
+import ShowService from '../component/ServicesFolder/ShowService';
 
 
 const image_11 = require('../component/images/image_11.png')
@@ -104,7 +105,7 @@ const NavigateContainer = () => {
                 <Route path='/service-users' element={<UsersList users={users} deleteUser={deleteUser} selectUser={selectUser} addUser={createUser}/>}/>
                 <Route path='/services' element={<ServicesList services={services} selectService={selectService} selectedService={selectedService}/>}/>
 
-                {/* <Route path={`/service-selected/${service.id}`} element={<ServiceItem services={services}/>}/> */}
+                <Route path={`/service-selected/${selectedService.id}`} element={<ShowService selectedService={selectedService}/>}/>
 
                 <Route path={`/update-user/${selectedUser._id}`} element={<UpdateUserForm user={selectedUser} updateUser={updateUser}/>} />
             </Routes>

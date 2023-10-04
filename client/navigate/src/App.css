@@ -33,6 +33,16 @@ body {
   top:5rem;
   left:3rem;
 }
+.ServiceProfile{
+  background-color: white;
+  border-radius: 2rem;
+  color: black;
+  position: relative;
+  width: 110vmin;
+  aspect-ratio: 1.618;
+  top:5rem;
+  left:3rem;
+}
 .UserList{
   position: relative;
   width:100%;
@@ -59,6 +69,13 @@ body {
   top: 8%;
   left:10%;
   font-size: small;
+}
+.ServiceProfileText{
+  position: relative;
+  top: 8%;
+  left:10%;
+  font-size: small;
+  padding-right: 2em;
 }
 /* delete and show profile button feature */
 button{
