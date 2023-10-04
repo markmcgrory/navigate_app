@@ -11,11 +11,12 @@ grid-template-columns: repeat(4, 1fr);
 justify-content: center;
 gap: 10px;
 `
-const ServicesList = ({services, selectService, selectedService}) => {
+
+const ServicesList = ({services, selectService, setSelectedService, selectedService, setServices}) => {
 
     const serviceNodes = services.map((service, index) => {
-        return <ServiceItem service={service} key={index} selectService={selectService}/>
-    })
+        return <ServiceItem service={service} key={index} setServices={setServices} selectedService={selectedService} setSelectedService={setSelectedService}/>
+    });
 
     
     return ( 

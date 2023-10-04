@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
 
 import styled from 'styled-components';
@@ -16,6 +16,8 @@ padding: 1em;
 
 const ServiceItem = ({service, selectService}) => {
 
+  const [bedStatus, setBedStatus] = useState(service.bedStatus)
+
    // Service item becomes like a checkout basket - service users can be assigned, unassigned
    // details are rendered as a list through each service when they are deposited
 
@@ -25,14 +27,24 @@ const ServiceItem = ({service, selectService}) => {
       // selected = true
   }
 
+  const onClick = () => {
+    if (bedStatus >= 1){
+      const bedStatusToUpdate = service.bedStatus;
+      const number = 1;
+      const results = bedStatusToUpdate - number;
+      setBedStatus(results)
+    };
+  };
+
     return ( 
         <ItemStyle>
             <img src={service.image}/>
             <ul>Name: {service.name}</ul>
             <ul>Location: {service.location}</ul>
-            <ul>Bed State: ??</ul>
+            <ul>Bed State: {bedStatus}</ul>
             <ul><Link to={`/service-selected/${service.id}`}><button onClick={handleSelectService}>More Info</button></Link></ul>
             <button onClick={handleSelectService}>Show On Map</button>
+            <button onClick={onClick}>Reserve a bed</button>
             <br></br>
             {/* {selected ? <h3>Selected</h3> : <h3>Not Selected</h3>} */}
         </ItemStyle>
