@@ -22,3 +22,16 @@ After cloning the repo or downloading the application as a .zip file and extract
 6.	To run the application in your local browser run the code below in the terminal;
   a.	npm start
 
+**MVP
+
+- To create a full-stack application the allowed a user to add a service user, a service and perform CRUD functionality
+- To display a list of all the homelessness and addiction services around the city of Glasgow
+- To display a list of service users with relevant personal details: name, age, date of birth, address, contact and more
+
+**Ext
+
+- To use ArcGIS to render a map showing the whole city of Glasgow
+- To allow the user to select a service and render a popup on the map of where this service is located
+- To allow the user to assign service users to different services
+
+
