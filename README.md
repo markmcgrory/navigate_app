@@ -38,6 +38,12 @@ After cloning the repo or downloading the application as a .zip file and extract
 - To allow the user to select a service and render a popup on the map of where this service is located
 - To allow the user to assign service users to different services
 
+<img width="1000" alt="Screenshot 2023-11-24 at 10 56 20" src="https://github.com/markmcgrory/navigate_app/assets/136241504/5da0f41c-b136-4352-9245-b1d0814dc221"/> 
+
+<img width="1000" alt="Screenshot 2023-11-24 at 10 56 41" src="https://github.com/markmcgrory/navigate_app/assets/136241504/361c66ed-3573-4236-96a9-6933ddcb5ad0"> 
+
+
+
 **Technologies, Frameworks * Languages**
 
 - ArcGIS
