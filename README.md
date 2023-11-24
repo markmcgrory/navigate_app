@@ -1,3 +1,5 @@
+<img width="1280" alt="Screenshot 2023-11-24 at 10 55 35" src="https://github.com/markmcgrory/navigate_app/assets/136241504/31f302b8-0b38-4fa1-b95c-21133afa7cc6">
+
 # Navigate_app
 Hello and thank you for checking out Navigate; an application created by Mark, Ibrahim, Matthew, and Emma during the CodeClan intensive professional software development course.
 
