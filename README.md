@@ -1,8 +1,10 @@
-# navigate_app
+# Navigate_app
 Hello and thank you for checking out Navigate; an application created by Mark, Ibrahim, Matthew, and Emma during the CodeClan intensive professional software development course.
 
 **What is Navigate?**
-Navigate is an internal application for the social services. We wanted to create an app that could store service users and support services data, allowing the user to add, update and assign users to services around Glasgow. 
+Navigate is an internal, location-data and management application for the social services. We wanted to create an app that could store service users and support services data, allowing the user to add, update and assign users to services around Glasgow.
+
+One of the main features of Navigate is the ArcGIS map rendered on the services page. Using dynamically loaded, coordinate data from different social-care and support services around the city of Glasgow - The user is able to select a service and render it's position on the map via a graphics point (a pop-up). This alongside the create, read, update and delete functionality of a list service-users provides the user with an intuitive management application. The MongoDb database stores all the relevant personal information of the current service-users in care at the present time - the app allows the user to update and add additional information when necessary. The application also allows the user to see the current vacancies amongst services by keeping track of the bedstates of each service.
 
 This application is currently in its version 1 as we would love to take some additional time to add additional features.
 
@@ -33,5 +35,16 @@ After cloning the repo or downloading the application as a .zip file and extract
 - To use ArcGIS to render a map showing the whole city of Glasgow
 - To allow the user to select a service and render a popup on the map of where this service is located
 - To allow the user to assign service users to different services
+
+**Technologies, Frameworks * Languages**
+
+- ArcGIS
+- React
+- MongoDb
+- Express
+- JavaScript
+- HTML/CSS
+- Insomnia
+
 
 
